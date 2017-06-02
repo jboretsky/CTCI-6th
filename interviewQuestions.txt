@@ -1,0 +1,9 @@
+How extensive is testing? Are developers expected to write tests other than unit tests? How many testers and interaction between devs and testers?
+
+How do you like working at the company?
+
+I'm really interested in object oriented coding pattern, what kind of patterns are used at the company?
+
+What is the dev environment like? What operating systems do you work on, what version control, etc?
+
+How is the onboarding process? How long do you expect new hires to take to get up to speed?
