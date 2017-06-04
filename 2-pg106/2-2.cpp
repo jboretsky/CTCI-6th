@@ -1,5 +1,3 @@
-#include <iostream>
-#include <unordered_set>
 #include "ll.h"
 
 int findKthFromLast( Node* head, int k ) {
