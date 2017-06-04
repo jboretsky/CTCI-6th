@@ -45,7 +45,7 @@ void mergeSort( vector<int>& toSort, int low, int high ) {
 }
 
 int main() {
-   vector<int> toMerge = {1,10};
+   vector<int> toMerge = {10, 1, 20, 19, 200, 40, 5, 3};
    for( auto val : toMerge ) {
       cout << val << ", ";
    }
