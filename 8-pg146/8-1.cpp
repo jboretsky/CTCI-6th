@@ -11,14 +11,11 @@ using namespace std;
  * (n-3)
  * How many ways could we get to those 3 steps? continue the same way..
  * Top down approach: countWays(n-1) + countWays(n-2) + countWays(n-3);
- * bottom up approach: start from 0 steps, then 1 step, then 2 steps.
  */
 
+// bottom up approach
 int countWays( int n ) {
    vector<int> memo;
-   // how many ways of going up 1 step?
-   // how many ways of going up 2 steps?
-   // how many ways of going up 3 steps?
    memo.push_back(1);
    memo.push_back(1);
    memo.push_back(2);
@@ -28,7 +25,26 @@ int countWays( int n ) {
    return memo[n];
 }
 
+
+// top down approach
+int memoize( vector<int>& memo, int n ) {
+   if(memo[n] != -1) {
+      return memo[n];
+   } else {
+      memo[n] = memoize(memo, n-1) + memoize(memo,n-2) + memoize(memo,n-3);
+      return memo[n];
+   }
+}
+
+int countWays2( int n ) {
+   vector<int> memo(n+1, -1);
+   memo[0] = 1;
+   memo[1] = 1;
+   memo[2] = 2;
+   return memoize(memo, n);
+}
+
 int main() {
-   cout << countWays(6) << endl;
+   cout << countWays2(3) << endl;
    return 0;
 }
