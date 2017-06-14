@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//using a set
 bool isUnique( string s ) {
    unordered_set<char> chars;
    for( auto ch : s ) {
@@ -15,6 +16,7 @@ bool isUnique( string s ) {
    return true;
 }
 
+//sorting method
 bool isUnique2( string s ) {
    sort( s.begin(), s.end() );
    for( int i = 0; i < s.size() - 1; ++i ) {
